@@ -1,0 +1,3 @@
+[submodule "py-brain-inventory"]
+	path = py-brain-inventory
+	url = git@github.com:brain-image-library/py-brain-inventory.git
