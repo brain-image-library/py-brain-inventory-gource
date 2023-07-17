@@ -16,8 +16,8 @@ jobs:
       - name: 'Gource Action'
         uses: BoundfoxStudios/action-gource@v2
         with:
-          git_url: https://github.com/docker/cli
-          gource_title: 'Docker CLI'
+          git_url: https://github.com/brain-image-library/py-brain-inventory
+          gource_title: 'py-brain-inventory'
           logo_url: 'https://raw.githubusercontent.com/brain-image-library/py-bil-inventory-gource/data-wrangling/images/logo.png'
           gource_resolution: '1080p'
           gource_fps: 60
