@@ -25,3 +25,9 @@ jobs:
       - name: Run Bash script
         run: |
           bash script.sh
+
+      - name: Upload video
+        uses: actions/upload-artifact@v2
+        with:
+          name: Gource video
+          path: output.mp4
