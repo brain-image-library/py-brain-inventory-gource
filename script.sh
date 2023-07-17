@@ -19,16 +19,20 @@ sed -i 's|Monica Paz Parra|Monica|g' /tmp/log.txt
 
 gource /tmp/log.txt -s 1 --disable-input --log-format git --stop-at-end --title "py-brain-inventory" \
        --seconds-per-day 5 \
-       --disable-3d-viewport \
        --user-image-dir images \
        --logo images/logo.png \
        --hide mouse \
        --start-date "2023-06-30" \
        -1280x720 \
-       -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 \
+       --output-ppm-stream output.ppm
+ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i output.ppm -vcodec libx264 \
        -preset ultrafast -crf 1 -threads 0 -bf 0 output.mp4 \
        2> /dev/null
 
 if [ -f output.log ]; then
 	rm -f output.log
+fi
+
+if [ -f output.ppm ]; then
+	rm -f output.ppm
 fi
