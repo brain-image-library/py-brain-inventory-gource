@@ -17,10 +17,12 @@ sed -i 's|Monica Paz Parra|Monica|g' /tmp/log.txt
 
 #students
 
-gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-inventory" \
+gource /tmp/log.txt -s 1 --disable-input --log-format git --stop-at-end --title "py-brain-inventory" \
        --seconds-per-day 5 \
+       --disable-3d-viewport \
        --user-image-dir images \
        --logo images/logo.png \
+       --hide mouse \
        --start-date "2023-06-30" \
        -1280x720 \
        -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 \
