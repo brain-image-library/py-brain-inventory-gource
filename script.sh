@@ -14,6 +14,10 @@ sed -i 's|icaoberg|Ivan|g' /tmp/log.txt
 sed -i 's|Ivan Cao-Berg|Ivan|g' /tmp/log.txt
 sed -i 's|eduardo.figueroa7|Eduardo|g' /tmp/log.txt
 sed -i 's|Monica Paz Parra|Monica|g' /tmp/log.txt
+sed -i 's|jellyfishking-github|Neptune|g' /tmp/log.txt
+sed -i 's|eileen-png|Eileen|g' /tmp/log.txt
+sed -i 's|Eunice-Song|Eunice|g' /tmp/log.txt
+sed -i 's|kexin-chen4|Kexin|g' /tmp/log.txt
 
 #students
 
