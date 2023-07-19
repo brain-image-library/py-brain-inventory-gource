@@ -9,11 +9,19 @@ git log --pretty=format:user:%aN%n%ct --reverse --raw --encoding=UTF-8 --no-rena
 cd ..
 
 #Staff
-sed -i 's|Ivan E. Cao-Berg|Ivan|g' /tmp/log.txt
-sed -i 's|icaoberg|Ivan|g' /tmp/log.txt
-sed -i 's|Ivan Cao-Berg|Ivan|g' /tmp/log.txt
-sed -i 's|eduardo.figueroa7|Eduardo|g' /tmp/log.txt
-sed -i 's|Monica Paz Parra|Monica|g' /tmp/log.txt
+if [[ "$OSTYPE" == *"darwin"* ]]; then
+       sed -i '' 's|Ivan E. Cao-Berg|Ivan|g' /tmp/log.txt
+       sed -i '' 's|icaoberg|Ivan|g' /tmp/log.txt
+       sed -i '' 's|Ivan Cao-Berg|Ivan|g' /tmp/log.txt
+       sed -i '' 's|eduardo.figueroa7|Eduardo|g' /tmp/log.txt
+       sed -i '' 's|Monica Paz Parra|Monica|g' /tmp/log.txt
+else
+       sed -i 's|Ivan E. Cao-Berg|Ivan|g' /tmp/log.txt
+       sed -i 's|icaoberg|Ivan|g' /tmp/log.txt
+       sed -i 's|Ivan Cao-Berg|Ivan|g' /tmp/log.txt
+       sed -i 's|eduardo.figueroa7|Eduardo|g' /tmp/log.txt
+       sed -i 's|Monica Paz Parra|Monica|g' /tmp/log.txt
+fi
 
 #students
 
