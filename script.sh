@@ -41,7 +41,7 @@ if [[ "$OSTYPE" == *"darwin"* ]]; then
        sed -i '' 's|sambenni|Sam|g' /tmp/log.txt
        sed -i '' 's|Togundar|Temi|g' /tmp/log.txt
        sed -i '' 's|marcuslynes|Marcuslyne|g' /tmp/log.txt
-       sed -i '' 's|nicolas-cmu|Nicoles|g' /tmp/log.txt
+       sed -i '' 's|nicolasw-cmu|Nicolas|g' /tmp/log.txt
 else
        sed -i 's|jellyfishking-github|Neptune|g' /tmp/log.txt
        sed -i 's|kexin-chen4|Kexin|g' /tmp/log.txt
@@ -59,7 +59,7 @@ else
        sed -i 's|sambenni|Sam|g' /tmp/log.txt
        sed -i 's|Togundar|Temi|g' /tmp/log.txt
        sed -i 's|marcuslynes|Marcuslyne|g' /tmp/log.txt
-       sed -i 's|nicolas-cmu|Nicoles|g' /tmp/log.txt
+       sed -i 's|nicolasw-cmu|Nicolas|g' /tmp/log.txt
 fi
 
 
@@ -67,6 +67,8 @@ fi
 gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-inventory" \
        --seconds-per-day 5 \
        --user-image-dir images \
+       --stop-at-end \
+       --highlight-users \
        --logo images/logo.png \
        --start-date "2023-06-30" \
        -1280x720 \
