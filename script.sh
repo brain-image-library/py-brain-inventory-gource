@@ -24,6 +24,45 @@ else
 fi
 
 #students
+if [[ "$OSTYPE" == *"darwin"* ]]; then
+       sed -i '' 's|jellyfishking-github|Neptune|g' /tmp/log.txt
+       sed -i '' 's|kexin-chen4|Kexin|g' /tmp/log.txt
+       sed -i '' 's|mercadec|Mercedes|g' /tmp/log.txt
+       sed -i '' 's|Sunshine-Alpha|Sunshine|g' /tmp/log.txt
+       sed -i '' 's|francojoshua|Joshua|g' /tmp/log.txt
+       sed -i '' 's|angelinaayoubi|Angie|g' /tmp/log.txt
+       sed -i '' 's|kvallejo6|Kimberly|g' /tmp/log.txt
+       sed -i '' 's|ManavMahida|Manav|g' /tmp/log.txt
+       sed -i '' 's|cmucung|Carmen|g' /tmp/log.txt
+       sed -i '' 's|Eunice-Son|Eunice|g' /tmp/log.txt
+       sed -i '' 's|eileen-png|Eileen|g' /tmp/log.txt
+       sed -i '' 's|Bobvius|Louis|g' /tmp/log.txt
+       sed -i '' 's|Tffny3|Tiffany|g' /tmp/log.txt
+       sed -i '' 's|sambenni|Sam|g' /tmp/log.txt
+       sed -i '' 's|Togundar|Temi|g' /tmp/log.txt
+       sed -i '' 's|marcuslynes|Marcuslyne|g' /tmp/log.txt
+       sed -i '' 's|nicolas-cmu|Nicoles|g' /tmp/log.txt
+else
+       sed -i 's|jellyfishking-github|Neptune|g' /tmp/log.txt
+       sed -i 's|kexin-chen4|Kexin|g' /tmp/log.txt
+       sed -i 's|mercadec|Mercedes|g' /tmp/log.txt
+       sed -i 's|Sunshine-Alpha|Sunshine|g' /tmp/log.txt
+       sed -i 's|francojoshua|Joshua|g' /tmp/log.txt
+       sed -i 's|angelinaayoubi|Angie|g' /tmp/log.txt
+       sed -i 's|kvallejo6|Kimberly|g' /tmp/log.txt
+       sed -i 's|ManavMahida|Manav|g' /tmp/log.txt
+       sed -i 's|cmucung|Carmen|g' /tmp/log.txt
+       sed -i 's|Eunice-Son|Eunice|g' /tmp/log.txt
+       sed -i 's|eileen-png|Eileen|g' /tmp/log.txt
+       sed -i 's|Bobvius|Louis|g' /tmp/log.txt
+       sed -i 's|Tffny3|Tiffany|g' /tmp/log.txt
+       sed -i 's|sambenni|Sam|g' /tmp/log.txt
+       sed -i 's|Togundar|Temi|g' /tmp/log.txt
+       sed -i 's|marcuslynes|Marcuslyne|g' /tmp/log.txt
+       sed -i 's|nicolas-cmu|Nicoles|g' /tmp/log.txt
+fi
+
+
 
 gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-inventory" \
        --seconds-per-day 5 \
