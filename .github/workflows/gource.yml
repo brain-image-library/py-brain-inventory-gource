@@ -1,0 +1,30 @@
+name: Gource Action for Docker CLI
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Gource Action'
+        uses: BoundfoxStudios/action-gource@v2
+        with:
+          git_url: https://github.com/brain-image-library/py-brain-inventory
+          gource_title: 'py-brain-inventory'
+          logo_url: 'https://raw.githubusercontent.com/brain-image-library/py-bil-inventory-gource/data-wrangling/images/logo.png'
+          gource_resolution: '1080p'
+          gource_fps: 60
+          gource_font_size: 18
+          gource_start_date: '2023-07-01'
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: gource
+          path: ./gource/gource.mp4
