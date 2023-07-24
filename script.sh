@@ -70,8 +70,8 @@ gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-invent
        --stop-at-end \
        --highlight-users \
        --logo images/logo.png \
-       --start-date "2023-07-06" \
-       --stop-date = 2023-08-04 \
+       start_date = "2023-07-06"
+       stop_date = "2023-08-03"
        -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 \
        -preset ultrafast -crf 1 -threads 0 -bf 0 output.mp4 \
        2> /dev/null
