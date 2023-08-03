@@ -63,6 +63,7 @@ else
 fi
 
 gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-inventory" \
+       --1920x1080 \
        --seconds-per-day 1 \
        --user-image-dir images \
        --stop-at-end \
@@ -76,4 +77,8 @@ gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-invent
 
 if [ -f output.log ]; then
 	rm -f output.log
+fi
+
+if [ -f output.mp4 ]; then
+       cp output.mp4 "py-brain-inventory-gource-$(date +%Y%m%d).mp4"
 fi
