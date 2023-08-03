@@ -62,16 +62,14 @@ else
        sed -i 's|nicolasw-cmu|Nicolas|g' /tmp/log.txt
 fi
 
-
-
 gource /tmp/log.txt -s 1 --log-format git --stop-at-end --title "py-brain-inventory" \
-       --seconds-per-day 5 \
+       --seconds-per-day 1 \
        --user-image-dir images \
        --stop-at-end \
        --highlight-users \
        --logo images/logo.png \
        --start-date "2023-07-06" \
-       --stop-date = 2023-08-04 \
+       --stop-date "2023-08-05" \
        -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 \
        -preset ultrafast -crf 1 -threads 0 -bf 0 output.mp4 \
        2> /dev/null
